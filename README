@@ -1,3 +1,14 @@
 Name: Riddhi Mittal
 SUNetID: riddhi
 SUID: 05496538
+
+Project: CS 240H Lab1
+
+Git repo: git@github.com:riddhi1212/cs240h-Lab1.git
+
+Build instructions:
+ghc --make lab1.hs
+./lab1 text1.txt text2.txt
+or
+./lab1
+(to read from stdin, use Ctrl+D as delimeter)
