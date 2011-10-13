@@ -16,12 +16,12 @@ getWords str = Data.List.filter (/= "") (Data.List.map (removeLeftPunctuation . 
 
 removeLeftPunctuation "" = ""
 removeLeftPunctuation w = if (not . isAlpha . head) w
-                            then drop 1 w
+                            then removeLeftPunctuation (drop 1 w)
 			    else w
 
 removeRightPunctuation "" = ""
 removeRightPunctuation w = if (not . isAlpha . last) w
-                             then (reverse . drop 1 . reverse) w
+                             then removeRightPunctuation ((reverse . drop 1 . reverse) w)
 			     else w
 
 -- Get dictionary with appropriate word counts from list of words

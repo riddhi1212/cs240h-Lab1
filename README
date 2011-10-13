@@ -12,3 +12,10 @@ ghc --make lab1.hs
 or
 ./lab1
 (to read from stdin, use Ctrl+D as delimeter)
+
+Note:
+I strip off punctuation at the beginning and end of a word, but let the ones in the middle stay.
+Examples:
+  don't = don't
+  text!! = text
+  "string" = string
